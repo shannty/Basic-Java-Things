@@ -1,0 +1,23 @@
+import java.text.DecimalFormat;
+public class Adult extends Clothing {
+
+	protected final double GST = 0.05;
+	
+	public Adult(String the_brand, double the_price) {
+		super(the_brand, the_price);
+	}
+	
+	@Override
+	public double total() {
+		
+		double GST_price = price + (GST * price);			// determines the total, with GST only
+		return GST_price;
+	}
+	
+	public String toString() {			// prints out all of the important information as a string
+		DecimalFormat fmt = new DecimalFormat("##.####");
+		String output = "Type: adult clothing\nBrand: " + brand + "\nPrice: " + price + "\nPrice with PST: " + fmt.format(total()) + "\n";
+		return output;
+	}
+
+}
