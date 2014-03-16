@@ -1,0 +1,23 @@
+// Shan Rajapakshe
+// 34125120
+// 31/01/2014
+
+public class Purchases {
+
+	public static void main(String[] args) {
+		
+		Clothing[] winter_clothes = new Clothing[5];
+		
+		winter_clothes[0] = new Children("Disney", 6.99);
+		winter_clothes[1] = new Children("Disney", 8.99);
+		winter_clothes[2] = new BCAdult("Old Navy", 14.99);
+		winter_clothes[3] = new MBAdult("Nike", 18.99);
+		winter_clothes[4] = new MBAdult("WalMart", 12.99);
+		
+		for (int count = 0; count < winter_clothes.length; count++)
+		{
+			System.out.println(winter_clothes[count]);
+		}
+	}
+
+}
