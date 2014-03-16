@@ -1,0 +1,24 @@
+// Shan Rajapakshe
+// 34125120
+// 31/01/2014
+
+import java.text.DecimalFormat;
+public class BCAdult extends Adult {
+
+	private final double PST = 0.07;
+	
+	public BCAdult(String the_brand, double the_price) {
+		super(the_brand, the_price);
+	}
+	
+	public double total() {			// determines total, with PST and GST		
+		double PST_price = super.total() + (PST * price);
+		return PST_price;
+	}
+	
+	public String toString() {				// prints out all of the important information as a string
+		DecimalFormat fmt = new DecimalFormat("##.####");
+		String output = "Type: adult clothing in BC\nBrand: " + brand + "\nPrice: " + price + "\nPrice with both taxes: " + fmt.format(total()) + "\n";
+		return output;
+	}
+}
