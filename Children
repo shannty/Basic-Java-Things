@@ -1,0 +1,23 @@
+// Shan Rajapakshe
+// 34125120
+// 31/01/2014
+
+public class Children extends Clothing {
+
+	public Children(String the_brand, double the_price) {
+		super(the_brand, the_price);
+	}
+	
+	
+	@Override
+	public double total() {		// Determines total, but does not include PST or GST
+		double total = price;
+		return total;
+		
+	}
+
+	public String toString() {				// prints out all of the important information as a string
+		String output = "Type: children clothing\nBrand: " + brand + "\nPrice: " + price + "\nPrice with PST: " + total() + "\n";
+		return output;
+	}
+}
